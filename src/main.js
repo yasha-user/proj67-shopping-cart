@@ -1,43 +1,5 @@
 let products = document.getElementById("products");
 
-let productItemsData = [
-  {
-    id: "uwuje1",
-    name: "casual shirt Bob",
-    price: 10,
-    desc: "Casual shirt made of cotton in two colors",
-    img: "/images/img-1.jpg",
-  },
-  {
-    id: "wudues2",
-    name: "casual shirt Mark",
-    price: 12,
-    desc: "Casual shirt made of cotton in two colors",
-    img: "/images/img-1.jpg",
-  },
-  {
-    id: "sadgasd3",
-    name: "casual shirt Brown",
-    price: 12,
-    desc: "Casual shirt made of cotton in two colors",
-    img: "/images/img-1.jpg",
-  },
-  {
-    id: "asfdsg4",
-    name: "casual shirt Terry",
-    price: 10,
-    desc: "Casual shirt made of cotton in two colors",
-    img: "/images/img-1.jpg",
-  },
-  {
-    id: "dasdasd5",
-    name: "casual shirt Roy",
-    price: 15,
-    desc: "Casual shirt made of cotton in two colors",
-    img: "/images/img-1.jpg",
-  },
-];
-
 let cartList = JSON.parse(localStorage.getItem("data")) || [];
 
 let generateProducts = () => {
@@ -47,7 +9,7 @@ let generateProducts = () => {
       let search = cartList.find((x) => x.id === id) || [];
       return `
 <div class="item" id="product-id-${id}">
-            <img width="200" src="${img}" alt="img-1">
+            <img width="200" src=".${img}" alt="img-1">
             <div class="details">
                 <h3>${name}</h3>
                 <p>${desc}</p>
@@ -82,8 +44,11 @@ let increment = (id) => {
   } else {
     search.items += 1;
   }
-  localStorage.setItem("data", JSON.stringify(cartList));
   update(selectedItemId.id);
+
+  cartList = cartList.filter((x) => x.items !== 0);
+
+  localStorage.setItem("data", JSON.stringify(cartList));
 };
 let decrement = (id) => {
   let selectedItemId = id;
@@ -97,7 +62,7 @@ let decrement = (id) => {
 
   update(selectedItemId.id);
 
-  cartlist = cartList.filter((x) => x.item !== 0);
+  cartList = cartList.filter((x) => x.items !== 0);
 
   localStorage.setItem("data", JSON.stringify(cartList));
 };
