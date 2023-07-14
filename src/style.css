@@ -67,9 +67,10 @@ a {
 
 .container {
     width: 1000px;
-    background-color: #113;
+    background-color: #aaa;
     margin: 0 auto;
     padding: 1rem 1.5rem;
+    border-radius: 10px;
 }
 
 .products {
@@ -165,6 +166,11 @@ a {
 /**
 * ! shopping-cart
 **/
+
+.details {
+    padding: 10px;
+    line-height: 1.5rem;
+}
 
 .shopping-cart {
     display: grid;
