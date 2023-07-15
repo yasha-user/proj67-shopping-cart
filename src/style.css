@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: black;
+    background-color: #aaa;
     color: #fff;
     font-family: sans-serif;
     font-size: 16px;
@@ -67,7 +67,7 @@ a {
 
 .container {
     width: 1000px;
-    background-color: #aaa;
+    background-color: #000;
     margin: 0 auto;
     padding: 1rem 1.5rem;
     border-radius: 10px;
@@ -95,6 +95,7 @@ a {
 }
 
 .price-quantity {
+    line-height: 2.5rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -170,6 +171,7 @@ a {
 .details {
     padding: 10px;
     line-height: 1.5rem;
+    gap: 20px;
 }
 
 .shopping-cart {
