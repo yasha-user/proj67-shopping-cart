@@ -31,9 +31,9 @@ let generateCartItems = () => {
         <i onclick="removeItem(${id})" class="bi bi-x-lg"></i>
         </div>
         <div class="buttons">
-                        <i onclick="increment(${id})" class="bi bi-plus-lg"></i>
-                        <div id=${id} class="quantity">${items}</div>
-                        <i onclick="decrement(${id})" class="bi bi-dash-lg"></i>
+        <i onclick="decrement(${id})" class="bi bi-dash-lg"></i>
+        <div id=${id} class="quantity">${items}</div>
+        <i onclick="increment(${id})" class="bi bi-plus-lg"></i>
                     </div>
                     <h3>$ ${items * search.price}</h3>
         </div>
