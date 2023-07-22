@@ -1,6 +1,6 @@
 # Shopping cart
 
-this repo is made by learning from youtube tutorial with link https://www.youtube.com/watch?v=cT_ZYrS3tKc.
+this repo is made while learning from youtube tutorial with link https://www.youtube.com/watch?v=cT_ZYrS3tKc.
 
 # how to use
 
